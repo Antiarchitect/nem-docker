@@ -29,7 +29,7 @@ RUN unzip servant.zip
 
 
 # the sample is used as default config in the container
-COPY ./custom-configs/supervisord.conf.sample /etc/supervisord.conf
+COPY ./custom-configs/supervisord.conf.supernodes /etc/supervisord.conf
 # wallet
 EXPOSE 7777
 # NIS
