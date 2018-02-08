@@ -31,6 +31,7 @@ RUN unzip servant.zip
 # the sample is used as default config in the container
 COPY ./custom-configs/supervisord.conf.supernodes /etc/supervisord.conf
 
+RUN sed -i 's/nis.transactionHashRetentionTime = 36/nis.transactionHashRetentionTime = -1/g' /package/nis/config.properties
 RUN sed -i 's/nem.network = mainnet/nem.network = testnet/g' /package/nis/config.properties
 
 # wallet
